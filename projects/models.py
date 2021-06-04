@@ -1,6 +1,11 @@
 from django.db import models
 from django.db.models.signals import pre_delete
 from django.dispatch.dispatcher import receiver
+from django.contrib.auth.models import AbstractUser
+
+class UserProfile(AbstractUser):
+    pass
+
 
 class Project(models.Model):
     title = models.CharField(max_length=250)
