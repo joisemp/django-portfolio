@@ -1,6 +1,10 @@
+var delayInMilliseconds = 2000;
+
 window.addEventListener('load', () => {
-    const loader_bg = document.querySelector(".loader_bg");
-    loader_bg.classList.add("preload-finish")
-    const loader = document.querySelector(".loader");
-    loader.classList.add("preload-finish1")
+    setTimeout(function() {
+        const loader_bg = document.querySelector(".loader_bg");
+        loader_bg.classList.add("preload-finish")
+        const loader = document.querySelector(".loader");
+        loader.classList.add("preload-finish1")
+      }, delayInMilliseconds);
 })
