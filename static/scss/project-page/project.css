@@ -29,4 +29,8 @@
   color: black;
   background: #ffff;
 }
+
+.hide {
+  display: none;
+}
 /*# sourceMappingURL=project.css.map */
