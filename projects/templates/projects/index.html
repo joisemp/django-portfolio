@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% load static %}
 <div class="group">
     <div class="card banner shadow">
         <small>DON'T MISS OUT THE LATEST</small>
@@ -10,13 +10,18 @@
     <div class="mt-5">
         <div class="row">
             {% for project in projects %}
-            <div class="col-md-4 col-xxl-3 p-2">
+            <div class="col-md-4 p-2">
                 <div class="card project-card">
                     <img src="{{project.image.url}}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">{{project.title}}</h5>
-                        <p class="card-text">{{project.description|truncatechars:20}}</p>
-                        <a href="#" class="btn shadow-none view-project-btn">Go somewhere</a>
+                        <div class="row">
+                            <div class="col-9">
+                                <h5 class="card-title">{{project.title}}</h5>
+                            </div>
+                            <div class="col-3">
+                                <a href="#" class="btn shadow-none view-project-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Download project file"><img src="{% static 'images/download-icon.svg' %}" alt=""></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
