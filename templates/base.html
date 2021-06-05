@@ -10,9 +10,20 @@
     <link rel="stylesheet" href="{% static 'scss/navbar/navbar.css' %}">
     <link rel="stylesheet" href="{% static 'scss/project-page/project.css' %}">
     <link rel="stylesheet" href="{% static 'scss/footer/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'scss/preloader/preloader.css' %}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>{% block title %}{% endblock title %}</title>
   </head>
+
+  <div class="loader_bg fixed-top shadow">
+    <div class="loader text-center">
+      <img src="{% static 'images/logo.svg' %}" alt=""> <br>
+      <div class="mt-2">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </div>
+
   <body>
     {% include 'navbar.html' %}
     <div class="container content">
