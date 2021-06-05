@@ -1,0 +1,29 @@
+.project-card .view-project-btn {
+  color: #212529;
+  background-color: #ffffff;
+  border-color: #212529;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.project-card .view-project-btn:hover,
+.project-card .view-project-btn:active,
+.project-card .view-project-btn:focus,
+.project-card .view-project-btn.active {
+  background: #212529;
+  color: #ffffff;
+  border-color: #212529;
+}
+
+.group {
+  margin: 100px 0 0 0;
+}
+
+.banner {
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  color: black;
+  background: #ffff;
+}
+/*# sourceMappingURL=project.css.map */
