@@ -1,3 +1,5 @@
+$base-color:#00000086;
+$pannel-bg:rgba(230, 230, 230, 0.212);
 .group{
     margin: 100px auto;
 }
@@ -8,12 +10,13 @@
 }
 
 .description{
+    color: $base-color;
     word-wrap:break-word
 }
 
 .color-wrapper{
     display: block;
-    width: 130px;
+    width: 140px;
     border-radius: 1rem;
     margin-left: auto;
     margin-right: auto;
@@ -30,7 +33,7 @@
 }
 
 .color-palette-pannel{
-    background-color: rgba(230, 230, 230, 0.212);
+    background-color: $pannel-bg;
 }
 
 a:link { text-decoration: none; }

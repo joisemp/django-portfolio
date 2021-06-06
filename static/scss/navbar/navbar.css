@@ -42,7 +42,6 @@
 #navbar {
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
-  background: rgba(255, 255, 255, 0.411);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -91,6 +90,6 @@
 }
 
 .link {
-  color: #0000fd;
+  color: rgba(0, 0, 253, 0.486);
 }
 /*# sourceMappingURL=navbar.css.map */

@@ -37,9 +37,8 @@
 
 #navbar{
     transition: top 0.3s;
-    background: rgba(255, 255, 255, 0.411);
-backdrop-filter: blur( 20px );
--webkit-backdrop-filter: blur( 20px );
+    backdrop-filter: blur( 20px );
+    -webkit-backdrop-filter: blur( 20px );
 }
 
 .navbar-toggler {
@@ -81,4 +80,4 @@ backdrop-filter: blur( 20px );
     width: 30px;
 }
 
-.link{color: rgb(0, 0, 253);}
+.link{color: rgba(0, 0, 253, 0.486);}
