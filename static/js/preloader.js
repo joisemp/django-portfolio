@@ -1,4 +1,4 @@
-var delayInMilliseconds = 2000;
+var delayInMilliseconds = 1000;
 
 window.addEventListener('load', () => {
     setTimeout(function() {

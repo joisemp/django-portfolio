@@ -89,4 +89,8 @@
   transform: rotate(45deg) translate(-20%, -130%);
   width: 30px;
 }
+
+.link {
+  color: #0000fd;
+}
 /*# sourceMappingURL=navbar.css.map */

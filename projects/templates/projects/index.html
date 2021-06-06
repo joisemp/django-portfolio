@@ -10,21 +10,22 @@
     <div class="mt-5">
         <div class="row">
             {% for project in projects %}
-            <div class="col-md-4 col-xxl-3 p-2">
-                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to know more">
-                <div class="card project-card" id="card">
-                    <img src="{{project.image.url}}" class="card-img-top" alt="...">
-                    <div class="card-body"></a>
-                        <div class="row">
-                            <div class="col-9">
-                                <h5 class="card-title">{{project.title}}</h5>
-                            </div>
-                            <div class="col-3">
-                                <a id="download-btn" href="#" class="btn shadow-none view-project-btn hide" data-bs-toggle="tooltip" data-bs-placement="top" title="Download project file"><img src="{% static 'images/download-icon.svg' %}" alt=""></a>
+            <div class="col-md-4 col-xxl-3 p-2 con">
+                <a href="{% url 'projects:project-detail' project.pk %}" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to know more">
+                    <div class="card project-card" id="card">
+                        <img src="{{project.image.url}}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-12">
+                                    <h5 class="card-title mt-2">{{project.title}}</h5>
+                                </div>
+                                <div class="col-12">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
             {% endfor %}
         </div>
