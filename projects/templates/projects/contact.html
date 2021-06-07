@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="group">
+  {% if name %}
+  <div class="alert alert-success text-center" role="alert">
+     <h4>Thanks {{name}} for reaching out to us</h4>
+     <p>We will get in touch with you as soon as possible</p>
+  </div>
+  {% else %}
+    <div class="card">
+        <div class="heading text-center">
+            <h3>Send me a message</h3>
+            <p class="text-center text-muted">Feel free to get in touch with me with anything related to this website or you can just say hi 👋 I will get back to you as soon as I can.
+            </p>
+        </div> <br>
+        <form autocomplete="off" class="row" action="{% url 'contact' %}" method="POST">
+            {% csrf_token %}
+            <div class="col-md-12 input-wrapper">
+              <input type="text" class="form-control input" placeholder="Name" name="name" id="">
+            </div>
+            <div class="col-md-12 input-wrapper">
+              <input type="email" class="form-control input" placeholder="Email" name="email" id="">
+            </div>
+            <div class="col-md-12 input-wrapper">
+                <input type="text" class="form-control input" placeholder="Subject" name="subject" id="">
+              </div>
+            <div class="col-12 input-wrapper">
+              <textarea rows="5" class="form-control input" placeholder="Message" name="message" id=""></textarea>
+            </div>
+            <div class="col-12 text-center input-wrapper">
+              <button type="submit" class="btn shadow-none">Send</button>
+            </div>
+        </form>
+    </div>
+  {% endif %}
+</div>
+{% endblock content %}

@@ -40,10 +40,9 @@
 }
 
 #navbar {
+  background: white;
   -webkit-transition: top 0.3s;
   transition: top 0.3s;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
 }
 
 .navbar-toggler {

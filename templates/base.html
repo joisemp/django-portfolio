@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
   {% url 'projects:project-home' as project_home %}
-  {% url 'projects:about' as about %}
+  {% url 'about' as about %}
+  {% url 'contact' as contact %}
   {% url 'projects:project-detail' project.pk as project_detail %}
 
     <!-- Required meta tags -->
@@ -23,6 +24,9 @@
     {% endif %}
     {% if request.path == about %}
       <link rel="stylesheet" href="{% static 'scss/about-page/about.css' %}">
+    {% endif %}
+    {% if request.path == contact %}
+      <link rel="stylesheet" href="{% static 'scss/contact-page/contact.css' %}">
     {% endif %}
 
     <title>{% block title %}{% endblock title %}</title>
