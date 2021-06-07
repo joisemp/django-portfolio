@@ -4,10 +4,10 @@
 <div class="group">
     <div class="row">
         <div class="col-12 col-md-8">
-            <img data-aos="fade-right" class="img-fluid" src="{{project.image.url}}" alt="">
+            <img class="img-fluid" src="{{project.image.url}}" alt="">
         </div>
         <div class="col-12 col-md-4 mt-3">
-            <div data-aos="fade-down">
+            <div>
                 <h2>{{project.title}}</h2>
                 {% if project.case_study_file %}
                     <a class="link" href="{{project.case_study_file.url}}" target="_blank">View or download case study</a>
@@ -17,7 +17,7 @@
                 </div>
             </div>
             {% if project.color_palette %}
-            <div class="color-palette-pannel card mt-3 p-3 text-center" data-aos="fade-up">
+            <div class="color-palette-pannel card mt-3 p-3 text-center">
                 <div class="heading">
                     <h3>Color Palette</h3>
                     <p class="text-muted">Colors used for this project</p>
@@ -83,7 +83,7 @@
             {% endif %}
             
             {% if project.file %}
-            <a data-aos="fade-up" class="btn download-btn btn-outline-dark shadow-none" href="{{project.file.url}}" download="{{project.file.url}}">Download Project</a>
+            <a class="btn download-btn btn-outline-dark shadow-none" href="{{project.file.url}}" download="{{project.file.url}}">Download Project</a>
             {% endif %}
 
         </div>

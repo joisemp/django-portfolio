@@ -2,7 +2,7 @@
 {% block content %}
 {% load static %}
 <div class="group">
-    <div class="card banner shadow" data-aos="fade-down">
+    <div class="card banner shadow">
         <small>DON'T MISS OUT THE LATEST</small>
         <h3>Weekly FREE UI Resources</h3>
         <small class="text-muted">Free UI designs and Bootstrap templates</small>
@@ -12,7 +12,7 @@
             {% for project in projects %}
             <div class="col-md-4 col-xxl-3 p-2 con">
                 <a href="{% url 'projects:project-detail' project.pk %}" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to know more">
-                    <div class="card project-card" data-aos="fade-up" id="card">
+                    <div class="card project-card" id="card">
                         <img src="{{project.image.url}}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <div class="row">
