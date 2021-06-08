@@ -5,6 +5,7 @@
   {% url 'about' as about %}
   {% url 'contact' as contact %}
   {% url 'projects:project-detail' project.pk as project_detail %}
+  {% url 'projects:category-page' category_name as project_category %}
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -27,6 +28,9 @@
     {% endif %}
     {% if request.path == contact %}
       <link rel="stylesheet" href="{% static 'scss/contact-page/contact.css' %}">
+    {% endif %}
+    {% if request.path == project_category %}
+      <link rel="stylesheet" href="{% static 'scss/category-page/category.css' %}">
     {% endif %}
 
     <link rel="icon" href="{% static 'images/icon.svg' %}">

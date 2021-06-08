@@ -54,54 +54,6 @@
   background: url(../../images/icon/bootstrap.svg) no-repeat center #fff;
 }
 
-.categories {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  vertical-align: baseline;
-  font-size: 20px;
-  font-family: Poppins;
-}
-
-.categories .software-item {
-  width: 42px;
-  height: 42px;
-  background-color: #F7F7FC;
-  border: 1px solid #a7a7a7;
-  border-radius: 25px;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  cursor: pointer;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
-  line-height: 42px;
-  font-size: 14px;
-  color: #7D7A9E;
-  margin-left: 10px;
-  position: relative;
-}
-
-.categories .software-item.all {
-  background: url(../../images/icon/All.svg) no-repeat center #fff;
-}
-
-.categories .software-item.Sketch {
-  background: url(../../images/icon/sketch.svg) no-repeat center #fff;
-}
-
-.categories .software-item.Figma {
-  background: url(../../images/icon/figma.svg) no-repeat center #fff;
-}
-
-.categories .software-item.XD {
-  background: url(../../images/icon/xd.svg) no-repeat center #fff;
-}
-
-.categories .software-item.Bootstrap {
-  background: url(../../images/icon/bootstrap.svg) no-repeat center #fff;
-}
-
 .group {
   margin: 100px 0 0 0;
 }
@@ -137,4 +89,4 @@
 .card-title {
   margin-top: -15px;
 }
-/*# sourceMappingURL=project.css.map */
+/*# sourceMappingURL=category.css.map */

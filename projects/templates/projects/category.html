@@ -1,30 +1,21 @@
 {% extends 'base.html' %}
-{% block title %}Projects{% endblock title %}
+{% block title %}{{category_name}} Projects{% endblock title %}
 {% block content %}
 {% load static %}
 <div class="group">
     <div class="card banner shadow">
-        <small class="text-muted">Free UI designs and Bootstrap templates</small>
-        <h3 class="mt-1">Weekly FREE UI Resources</h3>
-        {% if category_menu %}
-        <div class="categories mt-1">
-            <a href="{% url 'projects:project-home' %}" data-bs-toggle="tooltip" data-bs-placement="top" title="All"><div class="software-item shadow all mt-2">All</div></a>
-            {% for item in category_menu %}
-            <a href="{% url 'projects:category-page' item %}" data-bs-toggle="tooltip" data-bs-placement="top" title="{{item}}"><div class="software-item shadow {{item}} mt-2"></div></a>
-            {% endfor %}
-        </div>
-        {% endif %}
+        <h3>Category</h3>
+        <small class="text-muted">{{category_name}} Projects</small>
     </div>
-
     <div class="mt-5">
         <div class="row">
-            {% for project in projects %}
+            {% for project in category_projects %}
             <div class="col-md-4 col-xxl-3 p-2 con">
                 <a href="{% url 'projects:project-detail' project.pk %}" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to know more">
                     <div class="card project-card" id="card">
                         <img src="{{project.image.url}}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <a href="{% url 'projects:category-page' project.category %}" data-bs-toggle="tooltip" data-bs-placement="top" title="Filter Category"><div class="software-item
+                            <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Filter Category"><div class="software-item
                             {% if project.category == 'Figma' %}figma{% endif %}
                             {% if project.category == 'Sketch' %}sketch{% endif %}
                             {% if project.category == 'XD' %}xd{% endif %}

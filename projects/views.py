@@ -1,12 +1,19 @@
 from django.views.generic import ListView, DetailView, TemplateView
 from django.shortcuts import render
-from .models import Project
+from .models import Project, Categorie
 from django.core.mail import send_mail
 
 class ProjectHomeView(ListView):
     template_name = 'projects/index.html'
     queryset = Project.objects.all()
     context_object_name = 'projects'
+
+    def get_context_data(self, *args, **kwargs):
+        category_menu = Categorie.objects.all()
+        context = super(ProjectHomeView, self).get_context_data(*args, **kwargs)
+        context['category_menu'] = category_menu
+        return context
+
 
 class ProjectDetailView(DetailView):
     model = Project
@@ -33,3 +40,7 @@ def contact(request):
         return render(request, 'projects/contact.html', {'name':name})
     else:
         return render(request, 'projects/contact.html', {})
+
+def CategoryView(request, category_name):
+    category_projects = Project.objects.filter(category=category_name)
+    return render(request, 'projects/category.html', {'category_name':category_name, 'category_projects':category_projects})
