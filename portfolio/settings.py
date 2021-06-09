@@ -78,8 +78,11 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'portfolio',
+        'CLIENT': {
+           'host': 'localhost:27017',
+        }
     }
 }
 
@@ -137,6 +140,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = '587'
 EMAIL_HOST_USER = 'contactjoise@gmail.com'
-EMAIL_HOST_PASSWORD = 'dyjpawnbadwmmdjg'
+EMAIL_HOST_PASSWORD = 'qwfwgpuurztdwchn'
 EMAIL_USE_TLS = True
 # EMAIL_USE_SSL = False
