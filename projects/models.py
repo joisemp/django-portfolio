@@ -15,15 +15,10 @@ class Categorie(models.Model):
     def __str__(self):
         return str(self.name)
 
-choices = Categorie.objects.all().values_list('name', 'name')
-choice_list = []
-for item in choices:
-    choice_list.append(item)
-
 class Project(models.Model):
     title = models.CharField(max_length=250)
     description = models.TextField(null=True, blank=True)
-    category = models.CharField(max_length=255, default='Figma', choices=choice_list)
+    category = models.CharField(max_length=255, default='Figma')
     post_date = models.DateField(auto_now_add=True)
     post_time = models.TimeField(auto_now_add=True)
     image = models.ImageField(null=True, blank=True, upload_to='images/projects')
