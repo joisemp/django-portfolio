@@ -3,6 +3,7 @@
 {% block content %}
 {% load static %}
 <div class="group">
+    <!--
     <div class="card banner shadow">
         <small class="text-muted">Free UI designs and Bootstrap templates</small>
         <h3 class="mt-1">Weekly FREE UI Resources</h3>
@@ -15,22 +16,24 @@
         </div>
         {% endif %}
     </div>
-
+-->
     <div class="mt-5">
         <div class="row">
             {% for project in projects %}
-            <div class="col-md-4 col-xxl-3 p-2 con">
+            <div class="col-md-4 p-2 con">
                 <a href="{% url 'projects:project-detail' project.pk %}" data-bs-toggle="tooltip" data-bs-placement="top" title="Click to know more">
                     <div class="card project-card" id="card">
-                        <img src="{{project.image.url}}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <a href="{% url 'projects:category-page' project.category %}" data-bs-toggle="tooltip" data-bs-placement="top" title="Filter Category"><div class="software-item
+                        <img src="{{project.image}}" class="card-img-top" alt="...">
+                       
+                        <div class="card-img-overlay">
+                        <div class="software-item
                             {% if project.category == 'Figma' %}figma{% endif %}
                             {% if project.category == 'Sketch' %}sketch{% endif %}
                             {% if project.category == 'XD' %}xd{% endif %}
                             {% if project.category == 'Bootstrap' %}bootstrap{% endif %}">
-                            </div></a>
-                            <h5 class="card-title">{{project.title}}</h5>
+                        </div>
+                        <!--
+                            <h5 class="card-title">{{project.title}}</h5>-->
                         </div>
                     </div>
                 </a>
