@@ -9,13 +9,21 @@
         </div>
         <div class="col-12 col-md-4 mt-3">
             <div>
-                <h2>{{project.title}}</h2>
+                <h2 class="mb-4">{{project.title}}</h2>
                 {% if project.case_study_file %}
                     <a class="link" href="{{project.case_study_file}}" target="_blank">View or download case study</a>
                 {% endif %}
-                <div class="description">
-                    {{project.description}}
+                <div class="description mt-3">
+                    <div class="card text-white bg-primary">
+                        <div class="card-header"><b>Challenge</b></div>
+                        <div class="card-body">
+                          <p class="card-text">{{project.description}}</p>
+                        </div>
+                      </div>
                 </div>
+            {% if project.file %}
+            <a class="btn download-btn btn-outline-dark shadow-none" href="{{project.file}}" download="{{project.file.url}}">Download Project</a>
+            {% endif %}
             </div>
             {% if project.color_palette %}
             <div class="color-palette-pannel card mt-3 p-3 text-center">
@@ -81,10 +89,6 @@
 
                 </div>
             </div>
-            {% endif %}
-            
-            {% if project.file %}
-            <a class="btn download-btn btn-outline-dark shadow-none" href="{{project.file}}" download="{{project.file.url}}">Download Project</a>
             {% endif %}
 
         </div>

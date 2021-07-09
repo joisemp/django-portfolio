@@ -1,0 +1,92 @@
+.project-card .view-project-btn {
+  color: #212529;
+  background-color: #ffffff;
+  border-color: #212529;
+  border-radius: 3px;
+  width: 100%;
+}
+
+.project-card .view-project-btn:hover,
+.project-card .view-project-btn:active,
+.project-card .view-project-btn:focus,
+.project-card .view-project-btn.active {
+  background: #212529;
+  color: #ffffff;
+  border-color: #212529;
+}
+
+.project-card .software-item {
+  border: 1px solid #EBEBF2;
+  position: absolute;
+  left: 0;
+  top: -33px;
+  font-size: 0;
+  width: 42px;
+  height: 42px;
+  background-color: #F7F7FC;
+  border-radius: 25px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 42px;
+  font-size: 14px;
+  color: #7D7A9E;
+  margin-left: 10px;
+  position: relative;
+}
+
+.project-card .software-item.sketch {
+  background: url(../../images/icon/sketch.svg) no-repeat center #fff;
+}
+
+.project-card .software-item.figma {
+  background: url(../../images/icon/figma.svg) no-repeat center #fff;
+}
+
+.project-card .software-item.xd {
+  background: url(../../images/icon/xd.svg) no-repeat center #fff;
+}
+
+.project-card .software-item.bootstrap {
+  background: url(../../images/icon/bootstrap.svg) no-repeat center #fff;
+}
+
+.group {
+  margin: 100px 0 0 0;
+}
+
+.banner {
+  padding: 2rem;
+  width: 100%;
+  text-align: center;
+  color: black;
+  background: #ffff;
+}
+
+.con a:link {
+  text-decoration: none;
+}
+
+.con a:visited {
+  text-decoration: none;
+}
+
+.con a:hover {
+  text-decoration: none;
+}
+
+.con a:active {
+  text-decoration: none;
+}
+
+.con a {
+  color: #212529;
+}
+
+.card-title {
+  margin-top: -15px;
+}
+/*# sourceMappingURL=category.css.map */
