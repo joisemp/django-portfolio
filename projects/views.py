@@ -7,6 +7,7 @@ class ProjectHomeView(ListView):
     template_name = 'projects/index.html'
     queryset = Project.objects.all()
     context_object_name = 'projects'
+    ordering = ['-post_date','-post_time']
 
     def get_context_data(self, *args, **kwargs):
         category_menu = Categorie.objects.all()
